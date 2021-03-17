@@ -1,13 +1,15 @@
 const express = require('express')
 const AmpOptimizer = require('@ampproject/toolbox-optimizer');
 const cors = require('cors')
-const renderRoutes = require('./src/frontend/renderRoutes')
 const ampCors = require('amp-toolbox-cors');
+const compression = require('compression')
+const renderRoutes = require('./src/frontend/renderRoutes')
 
 const app = express()
 
 app.use(cors())
-app.use(ampCors());
+app.use(ampCors())
+app.use(compression())
  
 
 app.get('*', async function (req,res,next) {
