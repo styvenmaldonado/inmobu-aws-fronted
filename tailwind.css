@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+button, input, select, button:focus {
+    outline: none;
+ }
+
+::-webkit-scrollbar {
+    width: 0;  
+    background: transparent; 
+}
+
+.horizontal-scroll::after {
+    content: '';
+    padding-right: 1.25rem; 
+}
+
+.menuItem:hover .dropdown-content {
+    @apply flex absolute top-20 left-0;
+}
+
