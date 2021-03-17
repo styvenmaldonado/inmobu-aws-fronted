@@ -52,7 +52,7 @@ const MainSearchBar = () => {
                             <div class="hidden" [class]="textSearch.length > 3 ? 'block' : 'hidden'">
                               <amp-list items="predictions" layout="fixed" class="w-full h-52 "
                                   src=""
-                                  [src]="'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' + textSearch +'&types=geocode&components=country:co&key=AIzaSyCo4QWsfxnSPFCc7jsdGLQHpOChd7M4csI'"
+                                  [src]="'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' + textSearch +'&types=geocode&components=country:co&key=AIzaSyCo4QWsfxnSPFCc7jsdGLQHpOChd7M4csI'"
                                   class="w-full"
                                   >
                                 <template type="amp-mustache">
