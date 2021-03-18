@@ -9,7 +9,8 @@ const app = express()
 
 app.use(cors())
 app.use(ampCors({
-    sourceOriginPattern: /https:\/\/inmobu\.com$/
+    sourceOriginPattern: /https:\/\/inmobu\.com$/,
+    verifyOrigin: false
   }))
 app.use(compression())
  
