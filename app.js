@@ -8,7 +8,9 @@ const renderRoutes = require('./src/frontend/renderRoutes')
 const app = express()
 
 app.use(cors())
-app.use(ampCors())
+app.use(ampCors({
+    sourceOriginPattern: /https:\/\/inmobu\.com$/
+  }))
 app.use(compression())
  
 
