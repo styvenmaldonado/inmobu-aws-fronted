@@ -17,7 +17,7 @@ app.use(compression())
 
 app.get('*', async function (req,res,next) {
     try {
-        res.header("Access-Control-Allow-Origin", "YOUR-DOMAIN.TLD"); 
+        res.header("Access-Control-Allow-Origin",req.url); 
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.setHeader('Content-Type', 'text/html')
         const ampOptimizer = AmpOptimizer.create()
