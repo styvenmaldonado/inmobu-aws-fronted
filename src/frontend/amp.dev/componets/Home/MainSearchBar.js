@@ -12,10 +12,10 @@ const MainSearchBar = () => {
 
 
                 <div class="font-bold text-xs">Ciudad,sector o barrio</div>
-                <div> <input on="input-throttled:AMP.setState({textSearch: event.value })" class="inputfocus bg-transparent w-full" placeholder="¿Dónde buscas?"/></div> 
+                <div> <input on="input-throttled:AMP.setState({textSearch: event.value }); focus:AMP.setState({focus:1})" class="inputfocus bg-transparent w-full" placeholder="¿Dónde buscas?"/></div> 
                 
           
-                <div class="hidden" [class]="isFocued && 'dropdown absolute shadow-md mt-10 rounded-lg  w-2/5 left-16' ">
+                <div class="hidden" [class]="textSearch.length > 0 && 'dropdown absolute shadow-md mt-10 rounded-lg  w-2/5 left-16' ">
               
           
 
@@ -39,10 +39,7 @@ const MainSearchBar = () => {
              
 
 
-                      
-
-
-
+                    
 
                       
                         </div>
@@ -52,11 +49,11 @@ const MainSearchBar = () => {
                             <div class="hidden" [class]="textSearch.length > 3 ? 'block' : 'hidden'">
                               <amp-list items="predictions" layout="fixed" class="w-full h-52 "
                                   src=""
-                                  [src]="'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' + textSearch +'&types=geocode&components=country:co&key=AIzaSyCo4QWsfxnSPFCc7jsdGLQHpOChd7M4csI'"
+                                  [src]="'https://rjb20zmcaa.execute-api.us-east-1.amazonaws.com/dev/hello?input=' + textSearch "
                                   class="w-full"
                                   >
                                 <template type="amp-mustache">
-                                  <a target="_top" href="./search?main_text={{structured_formatting.main_text}}&secondary_text={{structured_formatting.secondary_text}}"> 
+                                  <a target="_top" href="search?main_text={{structured_formatting.main_text}}&secondary_text={{structured_formatting.secondary_text}}"> 
                                     <div class="flex items-center h-10  w-full hover:bg-gray-100 px-4">
                                       <div style="padding-right: 10px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" style="height:15px" viewBox="0 0 512 512">
