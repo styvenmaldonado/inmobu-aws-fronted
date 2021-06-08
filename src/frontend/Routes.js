@@ -1,11 +1,12 @@
 const Home = require('./amp.dev/containers/Home')
+const Search = require('./amp.dev/containers/Search')
 
 
 const Routes = (props) => {
   return [
     {
       path: '/',
-      component: Home(props)
+      component: '<h1>Main Page</h1>'
     }
     ,
     {
@@ -18,22 +19,28 @@ const Routes = (props) => {
         },
         {
           path: '/search',
-          component: '<h1>404 Error</h1>'
+          component: Search(props),
+          dynamicServing : true,
+        },
+         {
+          path: '/ex',
+          pwa:true
         },
         {
           path: '/login',
-          component: '<h1>404 Error</h1>'
+          pwa: true
         },
         {
           path: '/blog',
-          component: '<h1>404 Error</h1>'
+          pwa:true,
+
         }
 
       ]
     },   
     {
       path: '/:keyword1',
-      component: '<h1>404 Error</h1>',
+      component: '<h1>Ex</h1>',
       routes: [
         {
           path: "/:k",

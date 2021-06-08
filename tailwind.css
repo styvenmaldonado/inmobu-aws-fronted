@@ -21,3 +21,6 @@ button, input, select, button:focus {
     @apply flex absolute top-20 left-0;
 }
 
+.mapSearch {
+    height: calc(100% - 4rem);
+}

@@ -1,6 +1,7 @@
 const BuildPurgeCSS = require('../../lib/BuildPurgeCSS')
-const { cssAmp } = require('./cssAmp')
+const  {cssAmp}  = require('./amp.dev/cssAmp')
 
-const routes = cssAmp()
 
-routes.forEach(route => { new BuildPurgeCSS(route)})
+const routesAMP = cssAmp()
+
+routesAMP.forEach(route => { new BuildPurgeCSS(route)})

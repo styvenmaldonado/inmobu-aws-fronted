@@ -1,16 +1,5 @@
 const Header = () => {
-    return(` <head>
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
-    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    
-    <style amp-custom>
-    ${
-      renderSaas('../../assets/NavbarAMP.scss'
-     )}
-    </style>
+    return(` 
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -21,8 +10,7 @@ const Header = () => {
           "logo.jpg"
         ]
       }
-    </script>
-  </head>`)
+    </script>`)
 }
 
 export default Header;

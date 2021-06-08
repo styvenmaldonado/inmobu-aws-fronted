@@ -11,7 +11,7 @@ const Home =  (props) => {
   <!DOCTYPE HTML><html amp lang="es-CO">
    <head>
   <style amp-custom>${css}</style>
-  <link rel="canonical" href="${props.url}"
+  <link rel="canonical" href=""
      <title>Inmobu.com | Colombia</title>
    </head>
   <body class="font-sans">

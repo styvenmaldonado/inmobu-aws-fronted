@@ -5,7 +5,7 @@ const ButtonSignInUp = require('./ButtonSignInUp')
 
 const Navbar = () => {
     return `
-    <nav class="hidden lg:flex items-center w-full h-20 fixed shadow-xl pr-16 z-40 bg-white">
+    <nav class="hidden lg:flex items-center w-full h-20 fixed shadow pr-16 z-40 bg-white">
     <div class="mr-auto pl-16">
         <svg style="height:1.4em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.18 98.58">
             <path
